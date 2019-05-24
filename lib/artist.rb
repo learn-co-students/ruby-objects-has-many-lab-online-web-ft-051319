@@ -19,17 +19,13 @@ class Artist
   end
 
    def songs
-    Song.all.map do |song|
+    Song.all.select do |song|
       song.artist == self
     end
   end
 
    def self.song_count
-     counter = 0
-     self.all.each do |artist|
-       counter += artist.songs.counter
-     end
-     counter
+     Song.all.count
   end
 
  end
