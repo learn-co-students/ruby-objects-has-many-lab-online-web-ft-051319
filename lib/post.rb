@@ -10,10 +10,6 @@ class Post
     @title = title
   end
 
-  def title
-    @title
-  end
-
   def author_name
     author.name if author
   end
